@@ -1,0 +1,31 @@
+#Questao 1
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Bem-vindo!</h1>  
+        <label for="nome">Digite seu nome:</label><br>
+        <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+        <button onclick="botao()">Clique aqui</button>
+ <p id="mensagem"</p>
+
+ <script>
+function botao() {
+    
+    const nome = document.getElementById('nome').value.trim();
+
+      if (nome === "") {
+        document.getElementById('mensagem').innerText = "Por favor, insira seu nome.";
+    } else {
+        document.getElementById('mensagem').innerText = "Olá, " + nome + "! Seja bem-vindo a pagina do aluno";
+      }
+    }
+ </script>
+</body>
+</html>
