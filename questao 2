@@ -1,0 +1,45 @@
+#Questao 2
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <h1>Gerador de lista</h1>  
+
+    <input type="number" id="numero" name="numero" placeholder="Digite a quantidade de itens" required>
+    <button onclick="gerarLista()">Gerar lista</button>
+
+    <p id="mensagem"></p>
+    <ul id="resultado"></ul>
+<script>
+function gerarLista() {
+    const numero = parseInt(document.getElementById('numero').value);
+    const mensagem = document.getElementById('mensagem');
+    const resultado = document.getElementById('resultado');
+
+    mensagem.innerText = "";
+    resultado.innerHTML = "";
+
+
+    if (isNaN(numero) || numero <= 0) {
+        mensagem.innerText = "Por favor, insira um número válido";
+        return;
+    }
+    
+    for (let i = 1; i <= numero; i++) {
+        const item = document.createElement("li");
+        item.textContent = "Pedro Lessa" + i;
+        resultado.appendChild(item);
+    }
+
+    }
+
+
+
+</script>
+</body>
+</html>
